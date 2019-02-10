@@ -159,8 +159,8 @@ install_node(){
 	echo "#########################################################################"
 	echo "# One click Install Shadowsocks-Python-Manyuser                         "
 	echo "# Github: https://github.com/lizhongnian/ss-panel-v3-mod-node-connect   "
-	echo "# Author: 7colorblog                                                    "
-	echo "# blog: https://www.7colorblog.com                                      "	
+	echo "# Author: jcssr.vip                                                    "
+	echo "# blog: https://www.jcssr.vip                                     "	
 	echo "#########################################################################"
 	echo
 	#Check Root
@@ -200,9 +200,9 @@ install_node(){
 	cd /root/shadowsocks
 	echo -e "modify Config.py...\n"
 	sed -i "s#'zhaoj.in'#'jd.hk'#" /root/shadowsocks/userapiconfig.py
-	Userdomain=${Userdomain:-"http://127.0.0.1"}
+	Userdomain=${Userdomain:-"http://www.jcssr.vip"}
 	sed -i "s#https://zhaoj.in#${Userdomain}#" /root/shadowsocks/userapiconfig.py
-	Usermukey=${Usermukey:-"mupass"}
+	Usermukey=${Usermukey:-"junchi"}
 	sed -i "s#glzjin#${Usermukey}#" /root/shadowsocks/userapiconfig.py
 	UserNODE_ID=${UserNODE_ID:-"3"}
 	sed -i '2d' /root/shadowsocks/userapiconfig.py
@@ -224,9 +224,9 @@ install_node(){
 	chmod +x /etc/rc.d/rc.local
 	echo "#########################################################################"
 	echo "# 安装完成，节点即将重启使配置生效                                      "
-	echo "# Github: https://github.com/lizhongnian/ss-panel-v3-mod-node-connect   "
-	echo "# Author: 7colorblog                                                    "
-	echo "# blog: https://www.7colorblog.com                                      "	
+	echo "# Github: jcssr.vip   "
+	echo "# Author: jcssr.vip                                                   "
+	echo "# blog: http://www.jcssr.vip                                      "	
 	echo "#########################################################################"
 	reboot now
 }
